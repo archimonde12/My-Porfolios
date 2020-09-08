@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small JS Project || Archi</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <!------ google fonts ------>
+    <!-- Roboto -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Poppins -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!------ end google fonts ------->
+    <!------- Font Awsome ------->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-------end Font Awsome ------->
+
+    <!------- CSS ------->
+    <link rel="stylesheet" href="style.css">
+    <!-------end CSS ------->
+</head>
+
+<body>
+    <!-- header -->
+    <div class="header">
+        <div class=title>
+            <h1>My Small JS Projects</h1>
+        </div> 
+    </div>
+    <!-- end .header -->
+    <!-- project list -->
+    <div class="container">
+        <h1>All Projects</h1>
+        <hr>
+        <div class="row">
+            <div class="col-3" onclick='opentab("../Small JS Project/project/simple counter/index.html")'>
+                <img src="images/project_1_simple_counter.PNG" alt="">
+                <div class="project-title">
+                    <p>Simple Counter</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/countdown timer/index.html")'>
+                <img src="images/project_2_countdown_timer.PNG" alt="">
+                <div class="project-title">
+                    <p>Cooldown Timer</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/random color/index.html")'>
+                <img src="images/project_3_random_color.PNG" alt="">
+                <div class="project-title">
+                    <p>Random Color</p>
+                </div>
+            </div>
+        </div>
+        <!-- end .row -->
+        <div class="row">
+            <div class="col-3"  onclick='opentab("../Small JS Project/project/navagation bar/index.html")'>
+                <img src="images/project_4_navagation_bar.PNG" alt="">
+                <div class="project-title">
+                    <p>Navagation Bar</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/modal project/index.html")'>
+                <img src="images/project_5_model_project.PNG" alt="">
+                <div class="project-title">
+                    <p>model project</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/boring lorem/index.html")'>
+                <img src="images/project_6_boring_lorem.jpg" alt="">
+                <div class="project-title">
+                    <p>boring lorem</p>
+                </div>
+            </div>
+        </div>
+        <!-- end .row -->
+        <div class="row">
+            <div class="col-3" onclick='opentab("../Small JS Project/project/video project/index.html")'>
+                <img src="images/project_7_video_project.jpg" alt="">
+                <div class="project-title">
+                    <p>Video Project</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/slide bar/index.html")'>
+                <img src="images/project_8_sidebar.jpg" alt="">
+                <div class="project-title">
+                    <p>Sidebar</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/suggest search/index.html")'>
+                <img src="images/project_9_Suggest_Search.JPG" alt="">
+                <div class="project-title">
+                    <p>Suggest Search Project</p>
+                </div>
+            </div>
+        </div>
+        <!-- end .row -->
+        <div class="row">
+            <div class="col-3" onclick='opentab("../Small JS Project/project/register form valid/index.html")'>
+                <img src="images/project_10_form_sign_up.JPG" alt="">
+                <div class="project-title">
+                    <p>Form Register Validate</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/upload image/index.html")'>
+                <img src="images/project_11_uploadimage.JPG" alt="">
+                <div class="project-title">
+                    <p>Upload Image Project</p>
+                </div>
+            </div>
+            <div class="col-3" onclick='opentab("../Small JS Project/project/frequently question/index.html")'>
+                <img src="images/project_12_faq.JPG" alt="">
+                <div class="project-title">
+                    <p>FAQ</p>
+                </div>
+            </div>
+        </div>
+        <!-- end .row -->
+    </div>
+    <!-- end .container -->
+ 
+    <!-- footer -->
+    <div class="footer">
+        <p>Copyright 2020, Archi</p>
+    </div>
+    <!-- end .footer -->
+
+    <script>
+        function opentab(link){
+            window.open(link)
+        }
+    </script>
+<script src="index.js"></script>
+</body>
+
+</html>

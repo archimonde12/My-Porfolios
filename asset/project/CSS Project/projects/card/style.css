@@ -1,0 +1,786 @@
+/*===== IMPORT =====*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*===== VARIABLES =====*/
+
+/*===== GLOBAL =====*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/*===== CUSTOM =====*/
+
+.project__container {
+    width: 100vw;
+    height: 100vh;
+    /* max-height:600px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.project__container.dark{
+    background: #131313;
+}
+
+.project__container.dark>h1{
+    color:#fefefe;
+    margin-bottom:2rem;
+}
+
+.project__container:nth-child(2) {
+    background-color: #f0f0f0;
+}
+
+.project__container>h1 {
+    font-size: 3rem;
+}
+
+/* FLIP 3D */
+
+.container.flip_3d {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 70vh;
+    max-height: 400px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container.flip_3d {
+        padding: 20px 0;
+        height: 120vh;
+        max-height: 700px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+    }
+    .project__container {
+        height: 130vh;
+        max-height: 1000px;
+    }
+    .project__container>h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.container.flip_3d .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.container.flip_3d .card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container.flip_3d .card .face img {
+    max-width: 100px;
+}
+
+.container.flip_3d .card .face h3 {
+    width: 100px;
+    margin: 10px 0 0;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container.flip_3d .card .face.face1 {
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform-origin: bottom;
+}
+
+.container.flip_3d .card:hover .face.face1 {
+    transform: translateY(-100%) rotateX(90deg);
+    background: #ff0057;
+}
+
+.container.flip_3d .card .face.face2 {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform-origin: top;
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.container.flip_3d .card:hover .face.face2 {
+    transform: translateY(0%) rotateX(0);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+/* 3D TURN */
+
+.container.turn_3d {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 70vh;
+    max-height: 400px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container.turn_3d {
+        padding: 20px 0;
+        height: 120vh;
+        max-height: 700px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+    }
+    .project__container {
+        height: 130vh;
+        max-height: 1000px;
+    }
+    .project__container>h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.container.turn_3d .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.container.turn_3d .card .face {
+    background: #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container.turn_3d .card .face img {
+    max-width: 100px;
+}
+
+.container.turn_3d .card .face h3 {
+    width: 100px;
+    margin: 10px 0 0;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container.turn_3d .card .face.face1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition-delay: 0.5s;
+    transform-origin: bottom;
+}
+
+.container.turn_3d .card:hover .face.face1 {
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+    background: #ff0057;
+}
+
+.container.turn_3d .card .face.face2 {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index:1;
+    transform-origin: top;
+    transform: rotateY(90deg);
+    transition-delay: 0s;
+}
+
+.container.turn_3d .card:hover .face.face2 {
+    transform: rotateY(0);
+    transition-delay: 0.5s;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* SLIDE*/
+
+.container.slide {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 70vh;
+    max-height: 600px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container.slide {
+        padding: 20px 0;
+        height: 120vh;
+        max-height: 700px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+    }
+    .project__container {
+        height: 130vh;
+        max-height: 1000px;
+    }
+    .project__container>h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.container.slide .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.container.slide .card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container.slide .card .face img {
+    max-width: 100px;
+}
+
+.container.slide .card .face h3 {
+    width: 100px;
+    margin: 10px 0 0;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.container.slide .card .face.face1 {
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform-origin: bottom;
+}
+
+.container.slide .card:hover .face.face1 {
+    transform: translateY(-50%);
+    background: #ff0057;
+    z-index: 100;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.container.slide .card .face.face2 {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transform-origin: top;
+}
+
+.container.slide .card:hover .face.face2 {
+    transform: translateY(50%);
+    z-index: 99;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container.slide:hover .card:not(:hover) {
+    filter: brightness(0.5) saturate(0) contrast(1) blur(2px);
+  }
+
+/* RESPONSIVE */
+
+.container.responsive {
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 70vh;
+    max-height: 600px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container.responsive {
+        padding: 20px 0;
+        height: 120vh;
+        max-height: 700px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100vw;
+    }
+    .project__container {
+        height: 130vh;
+        max-height: 1000px;
+    }
+    .project__container>h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.container.responsive .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+}
+
+.container.responsive .card .face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.container.responsive .card .face img {
+    max-width:100px;
+}
+
+.container.responsive .card:hover .face.face1 img{
+    width: 50px;
+}
+
+.container.responsive .card .face.face1 h3 {
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform: translateX(-50%);
+    margin: 10px 0 0;
+    color:rgba(0,0,0,0.2);
+    text-transform: capitalize;
+    font-size: 4rem;
+}
+
+.container.responsive .card .face.face1 {
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transform-origin: bottom;
+}
+
+.container.responsive .card:hover .face.face1 {
+    width: 150px;
+    height:100px;
+    background: #ff0057;
+    z-index: 100;
+    top:-70px;
+    left:75px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.container.responsive .card:hover .face.face1 h3 {
+   display:none;
+}
+
+.container.responsive .card .face.face2 {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px 20px 50px;
+    transform-origin: top;
+}
+
+.container.responsive .card .face.face2 p{
+    font-size: 0.8rem;
+    margin:0.5rem 0px 1rem;
+}
+
+.container.responsive .card .face.face2 a{
+    margin-top:0.8rem;
+    text-decoration:none;
+    padding:7px;
+    color:#eee;
+    background-color: #222;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+
+.container.responsive .card:hover .face.face2 {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+/* E-COMMERCE CARD */
+.container.commerce{
+    position: relative;
+}
+
+.container.commerce .card{
+    position: relative;
+    width: 320px;
+    height:450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow:hidden;
+}
+/* create green circle */
+.container.commerce .card::before{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height:100%;
+    background:#9bdc28;
+    clip-path: circle(150px at 80% 20%);
+    transition:0.5s ease-in-out;
+}
+
+.container.commerce .card:hover::before{
+  
+    clip-path: circle(300px at 80% -20%);
+
+}
+
+.container.commerce .card::after{
+    content:'Nike';
+    position: absolute;
+    top:30%;
+    left:-20%;
+    font-size: 12rem;
+    font-weight: 800;
+    font-style: italic;
+    color:rgba(255,255,255,0.04)
+}
+
+.container.commerce .card .imgBx{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%) scaleX(-1);
+    width: 100%;
+    height:320px;
+    z-index:1000;
+    transition:0.5s;
+}
+
+.container.commerce .card:hover .imgBx{
+    top:0%;
+    transform: translateY(-20%) scaleX(-1);
+}
+
+.container.commerce .card .imgBx img{
+    width: 270px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%) rotate(25deg);
+}
+
+.container.commerce .card .contentBx{
+    position:absolute;
+    width:100%;
+    height:100px;
+    text-align: center;
+    transition:1s;
+    z-index:10;
+    bottom:0;
+}
+
+.container.commerce .card:hover .contentBx{
+    height:210px;
+}
+
+.container.commerce .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color:#fff
+}
+
+.container.commerce .card .contentBx .size,
+.container.commerce .card .contentBx .color{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding:8px 20px;
+    transition:0.5s;
+    opacity:0;
+    visibility: hidden;
+}
+
+.container.commerce .card:hover .contentBx .size{
+    opacity:1;
+    visibility: visible;
+    transition-delay: 0.45s;
+}
+
+.container.commerce .card:hover .contentBx .color{
+    opacity:1;
+    visibility: visible;
+    transition-delay: 0.6s;
+}
+
+.container.commerce .card .contentBx .size h3,
+.container.commerce .card .contentBx .color h3{
+    color:#fff;
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+
+.container.commerce .card .contentBx .size span{
+    width: 26px;
+    height:26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display:inline-block;
+    color:#111;
+    background-color: #fff;
+    margin:0 5px;
+    transition:.5s;
+    border-radius:4px;
+    cursor: pointer;
+}
+
+.container.commerce .card .contentBx .color span{
+    width: 20px;
+    height:20px;
+    display:inline-block;
+    background-color: #ff0;
+    margin:0 5px;
+    border-radius:50%;
+    cursor: pointer;
+    position:relative;
+}
+
+.container.commerce .card .contentBx .color span:nth-child(2){
+    background-color: #9bdc28;
+}
+
+.container.commerce .card .contentBx .color span:nth-child(3){
+    background-color: #03a9f4;
+}
+
+.container.commerce .card .contentBx .color span:nth-child(4){
+    background-color: #e91e63;
+}
+
+.container.commerce .card .contentBx .size span:hover{
+    background-color: #9bdc28;
+}
+
+.container.commerce .card .contentBx .size span.select{
+    background-color: #9bdc28;
+}
+
+
+.container.commerce .card .contentBx .color span.select::before{
+    content: "✔️";
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.container.commerce .card .contentBx a{
+    display:inline-block;
+    padding:10px 20px;
+    background-color: #fff;
+    border-radius:4px;
+    margin-top:10px;
+    text-decoration: none;
+    font-weight: 600;
+    color:#111;
+    opacity: 0;
+    transform: translateY(50px);
+    transition:0.5s;
+}
+
+.container.commerce .card:hover .contentBx a{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: .75s;
+}
+
+.container.commerce .card .contentBx a:hover{
+    background-color:#9bdc28;
+}
+
+/* E-COMMERCE CARD 3D-Mousemove */
+.container.commerce__mousemove3D{
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.container.commerce__mousemove3D .card{
+    position: relative;
+    width: 320px;
+    height:450px;
+    background: #232323;
+    border-radius: 20px;
+    overflow:hidden;
+    transform-style:preserve-3d;
+}
+
+.container.commerce__mousemove3D .card::before{
+    content:"NIKE";
+    position: absolute;
+    top:20px;
+    left:20px;
+    font-size: 6rem;
+    text-align: center;
+    font-weight: 900;
+    color:#fff;
+    font-style: italic;
+    opacity: 0;
+    transition:.5s;
+}
+
+.container.commerce__mousemove3D .card::after{
+    content:"SHOES";
+    position: absolute;
+    left:20px;
+    bottom:20px;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 900;
+    color:#fff;
+    font-style: italic;
+    opacity: 0;
+    transition:.5s;
+}
+
+.container.commerce__mousemove3D .card:hover::after,
+.container.commerce__mousemove3D .card:hover::before{
+    opacity: 0.04;
+}
+
+
+
+.container.commerce__mousemove3D .card .name{
+    color:#fff;
+    position: absolute;
+    top:0;
+    text-align: center;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translateX(0) translateY(0) translateZ(50px);
+    transition:0.5s;
+    z-index:10;
+    opacity: 0;
+}
+
+.container.commerce__mousemove3D .card:hover .name{
+    top:40px;
+    opacity: 1;
+}
+
+.container.commerce__mousemove3D .card .buy__btn{
+    color:#fff;
+    text-decoration: none;
+    background-color: #9bdc28;
+    padding:10px 25px;
+    border-radius:30px;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    transition:0.5s;
+    z-index:10;
+    opacity: 0;
+}
+
+.container.commerce__mousemove3D .card:hover .buy__btn{
+    bottom:30px;
+    opacity: 1;
+}
+
+.container.commerce__mousemove3D .card .circle{
+    top:50%;
+    left:50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,0px);
+    transition:0.5s;
+    position: absolute;
+    background-color:#9bdc28;
+    width: 200px;
+    height:200px;
+    border-radius:50%;
+    z-index:10;
+}
+
+.container.commerce__mousemove3D .card:hover .circle{
+    transform: translate3d(-50%,-50%,50px) translateZ(100px);
+}
+
+
+.container.commerce__mousemove3D .card img{
+    max-width:300px;
+    top:50%;
+    left:50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,0px) scaleX(-1) rotate(15deg) translateZ(100px);
+    position: absolute;
+    z-index:999;
+}
+
+.container.commerce__mousemove3D .card:hover img{
+    transform: translate3d(-50%,-50%,100px) scaleX(-1) rotate(15deg);
+}
+
+/* DOWNLOAD BUTTON */
+
+.button__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    max-width: 260px;
+}
+
+.css__button-copy, .html__button-copy {
+    text-align: center;
+    padding: 10px 20px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 5px;
+    min-width: 120px;
+}
+
+.css__button-copy:hover, .html__button-copy:hover {
+    background-color: #000;
+    color: #fff;
+}

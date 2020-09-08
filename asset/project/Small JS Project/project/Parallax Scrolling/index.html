@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <img src="images/bg.jpg" alt="" id="bg">
+        <img src="images/moon.png" alt="" id="moon">
+        <img src="images/mountain.png" alt="" id="mountain">
+        <img src="images/road.png" alt="" id="road">
+        <h2 id="text">Moon Light</h2>
+    </section>
+
+    <div class="text__container">
+        <h1>Parallax Background Scrolling</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec justo nunc, euismod vel consequat eu, lobortis
+            vel arcu. Aenean eget ipsum felis. Mauris pharetra lacus nunc, semper fermentum tellus fermentum quis.
+            Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla tristique tristique risus. Integer vitae
+            metus iaculis, ullamcorper nibh sit amet, varius diam. Donec eu leo sit amet lorem ullamcorper rhoncus vel a
+            sapien. Praesent eu nulla id est hendrerit porttitor sed sed nisi. Sed blandit nibh ut elit ultricies
+            finibus et sed ipsum. Mauris eu cursus metus, eu mollis dui. Phasellus ligula metus, suscipit non aliquam
+            at, luctus vel libero. Proin vulputate justo et metus pharetra, ut pellentesque enim auctor. Nam porta
+            maximus ullamcorper. Pellentesque rutrum pulvinar mauris in hendrerit. Aliquam fringilla laoreet nulla vel
+            sagittis. Duis orci lorem, bibendum sed mi a, vulputate aliquam odio.</p>
+        <p>Mauris luctus nibh in orci euismod, sit amet blandit lorem efficitur. Morbi eleifend ipsum quis risus
+            ultrices, a auctor enim tempor. Suspendisse sapien sapien, feugiat at quam eget, viverra bibendum lacus.
+            Morbi vel eleifend nibh. Maecenas quis diam sed odio ornare pharetra. Donec feugiat est lorem, ac posuere
+            dolor hendrerit sed. In pulvinar risus viverra est congue lobortis. In fringilla nisl lacus, et interdum
+            tellus luctus eget. Vivamus quis porttitor felis. Donec eget eros facilisis ipsum mattis pharetra. Class
+            aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse accumsan
+            viverra arcu vitae pellentesque. Aliquam nec porttitor urna. Cras ac turpis erat. Pellentesque vel nulla sed
+            nunc dignissim auctor elementum et orci.
+        </p>
+        <p> Duis posuere sit amet purus nec aliquam. Donec rhoncus, nibh varius accumsan auctor, quam nibh bibendum est,
+            eu pulvinar urna massa at risus. Sed tincidunt nec mi id varius. Nulla facilisi. Pellentesque tortor enim,
+            porta in fermentum at, ornare ut eros. Aenean gravida elit a malesuada venenatis. Nunc vitae tincidunt
+            nulla.</p>
+    </div>
+
+
+
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.1 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+
+        });
+    </script>
+</body>
+
+</html>

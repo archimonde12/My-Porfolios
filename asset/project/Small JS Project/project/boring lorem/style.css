@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #e7edf3;
+}
+
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    color:#102A42;
+    max-width:1380px;
+    margin-top:100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container h1{
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #102A42;
+    margin-bottom:2rem
+}
+
+.container span{
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    color: #102A42;
+}
+
+.container input{
+    padding: 0.25rem 0.5rem;
+    width: 4rem;
+    border-radius:0.5rem;
+    border: none;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+}
+
+.container button{
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #102A42;
+    padding: 6px 12px;
+    border-radius: 5px;
+    background-color: #49A6E9;
+}
+
+.container button:hover{
+    background-color:#102A42;
+    color:#49A6E9;
+}
+
+.lorem-text {
+    font-family: 'Roboto', sans-serif;
+    margin: 3rem auto;
+    max-width: 40rem;
+    width: 90vw;
+    text-align: center;
+    color:#1b446b;
+    
+}
+
+.lorem-text .result{
+    line-height: 1.5;
+    font-size:1rem;
+    margin-bottom: 2rem;
+}
+
+
+/* ------- media querry for less than 980 screen size ------- */
+@media only screen and (max-width:980px){
+    .col-2{
+        flex-basis: 100%;
+        padding:40px;
+    }
+
+}

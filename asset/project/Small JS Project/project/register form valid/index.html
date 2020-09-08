@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form SignUp || Small JS Project||Archi</title>
+    <link rel="shortcut icon" href="favicon-16x16.png" type="image/x-icon">
+    <!-- google fonts -->
+    <!-- Roboto -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- Poppins -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Font Awsome -->
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- sign-in -->
+    <section class="sign-in">
+        <!-- form-container -->
+        <div class="form-container">
+            <!-- form-header -->
+            <div class="form-header">
+                <h2>Create Account</h2>
+            </div>
+            <!--end .header -->
+            <div class="form-wrap">
+                <form id="signup-form">
+                    <div class="input-wrap">
+                        <label for="name">Username</label>
+                        <input id="sign-up-name" name="name" type="text">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="email">Email</label>
+                        <input  id="sign-up-email"  name="email" type="text">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="password">password</label>
+                        <input id="sign-up-password" name="name" type="password">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+                    <div class="input-wrap">
+                        <label for="confirmPassword">confirm password</label>
+                        <input id="sign-up-confirm-password" name="confirmPassword" type="password">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error Message</small>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit </button>
+                </form>
+            </div>
+            <!--end .form-wrap -->
+        </div>
+         <!--end .form-container -->
+    </section>
+    <!-- end .sign-in -->
+
+    <script src="index.js"></script>
+</body>
+
+</html>

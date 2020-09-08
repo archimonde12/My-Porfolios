@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Pepsi | Archi</title>
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="nav__container">
+        <div class="nav__header">
+            <div class="nav__logo">
+                <a href=""><img class="logo" src="asset/images/logo.png" alt=""></a>
+            </div>
+            <div class="nav__menu">
+                <ul>
+                    <li><a class="nav__item-link" href="#">Home</a></li>
+                    <li><a class="nav__item-link" href="#">Products</a></li>
+                    <li><a class="nav__item-link" href="#">What's New</a></li>
+                    <li><a class="nav__item-link" href="#">Newsletter</a></li>
+                    <li><a class="nav__item-link" href="#">Contact</a></li>
+                </ul>
+                <div class="nav__toggle" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+        <div class="nav__body">
+            <div class="nav_content">
+                <h1 class="nav__title">That's what <br><span>I LIKE</span></h1>
+                <p class="nav__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales viverra nisl
+                    vitae varius. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas. Maecenas consectetur risus ante, sit amet ornare sapien eleifend et. Nunc eget tempus ex,
+                    sit amet dignissim urna.</p>
+                <a href="#" class="nav__btn">View All Products</a>
+            </div>
+            <div class="nav__product">
+                <img src="asset/images/pepsi001.png" class="product">
+            </div>
+        </div>
+        <div class="nav__product-picker">
+            <ul>
+                <li><img src="asset/images/pepsi001.png" onclick="imgSlider('asset/images/pepsi001.png','#0062be')">
+                </li>
+                <li><img src="asset/images/pepsi002.png" onclick="imgSlider('asset/images/pepsi002.png','#E86F77')">
+                </li>
+                <li><img src="asset/images/pepsi003.png" onclick="imgSlider('asset/images/pepsi003.png','#333')"></li>
+            </ul>
+        </div>
+        <div class="nav__social">
+            <ul>
+                <li><img src="asset/images/facebook.png"></li>
+                <li><img src="asset/images/twitter.png"></li>
+                <li><img src="asset/images/instagram.png"></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- scripts -->
+    <script>
+        function imgSlider(anything, color) {
+            //Change Product
+            document.querySelector('.product').src = anything;
+            //Change Background
+            document.querySelector('.nav__container').style.backgroundColor = color
+        }
+
+        function toggleMenu(){
+            document.querySelector('.nav__menu ul').classList.toggle('active');
+            document.querySelector('.nav__toggle').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>

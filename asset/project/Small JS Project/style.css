@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #e7edf3;
+}
+
+.header {
+    display: grid;
+    place-items: center;
+    height: 30vh;
+    background-color: #323330;
+    color: #f0db51;
+}
+
+.header .title {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.header p {
+    color: #f0db51;
+    font-family: 'Roboto', serif;
+    font-style: italic;
+}
+
+/* -- project list -- */
+
+.container {
+    max-width: 1300px;
+    margin: 100px auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    color: #102A42;
+}
+
+.container>p {
+    text-transform:capitalize;
+    color: #102A42;
+}
+
+.container hr {
+    width: 100px;
+    height: 8px;
+    background-color: #f0db51;
+    border: none;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 5px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 200px;
+    transition: transform 0.2s;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #f0db51;
+}
+
+.col-3:hover {
+    transform: scale(1.05);
+}
+
+.col-3 img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.col-3 .project-title {
+    padding: 10px;
+    color: #323330;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.col-3 .project-title p {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+/* -- footer -- */
+
+.footer {
+    display: grid;
+    place-items: center;
+    height: 20vh;
+    background-color: #323330;
+    color: #f0db51;
+}
+
+.footer p {
+    color: #f0db51;
+    font-family: 'Roboto', serif;
+}
+
+/* ------- media querry for less than 800 screen size ------- */
+@media only screen and (max-width:700px){
+    .col-3{
+        flex-basis: 100%;
+        margin-bottom:100px;
+    }
+
+    .row{
+        margin-bottom: 0px;
+    }
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+
+/* ------- media querry for less than 600 screen size ------- */
+@media only screen and (max-width:600px){
+
+    .header h1{
+        font-size: 8vw;
+    }
+
+    .container h1{
+        font-size: 25px;
+    }
+}

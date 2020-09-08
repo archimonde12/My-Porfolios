@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.sign-in {
+    height: 100vh;
+    width: 100vw;
+    background: #e7edf3;
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    min-width: 300px;
+    min-height: 300px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow:0px 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-header {
+    padding: 1rem 2rem;
+    background-color: #5aaae4;
+    border-radius: 5px 5px 0 0 ;
+}
+
+.form-header h2 {
+    font-size: 1.3rem;
+    color:white;
+}
+
+.form-wrap {
+    padding: 1rem 2rem;
+    font-size: 0.8rem;
+}
+
+.form-wrap .input-wrap {
+    margin: 0 auto 0.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.form-wrap .input-wrap label {
+    display: block;
+    text-transform: capitalize;
+}
+
+.form-wrap .input-wrap input {
+    width: 100%;
+    height: 2rem;
+}
+
+.input-wrap input:focus{
+    outline: none;
+    border:2px solid #5aaae4;
+    border-radius:3px;
+}
+
+.form-wrap .submit-btn {
+    width: 100%;
+    background: #5aaae4;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 0.5rem 0px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 2.5px;
+    margin-top: 1rem;
+}
+
+.input-wrap i {
+    position: absolute;
+    top: 20px;
+    right:2px;
+    background-color: #eef0f1;
+    width: 28px;
+    height:28px;
+    display: grid;
+    place-items: center;
+    visibility: hidden;
+    border-radius: 0 3px 3px 0 ;
+}
+
+
+
+.input-wrap small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+/* valid style */
+
+.input-wrap.valid input {
+    border: 2px solid #49a942;
+    border-radius: 3px;
+   
+}
+
+.input-wrap.valid i.fa-check-circle {
+    visibility: visible;
+    color: #49a942;
+    /* border-top: 2px solid #49a942;
+    border-right: 2px solid #49a942;
+    border-bottom: 2px solid #49a942; */
+    
+}
+
+/* invalid style */
+
+.input-wrap.invalid input {
+    border: 2px solid #ed1c24;
+    border-radius: 3px;
+}
+
+.input-wrap.invalid i.fa-exclamation-circle {
+    visibility: visible;
+    color: #ed1c24;
+}
+
+.input-wrap.invalid small {
+    visibility: visible;
+    color: #ed1c24;
+
+}
